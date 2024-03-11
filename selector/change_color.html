@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thay đổi màu text bằng jquery</title>
+    <script type="text/javascript" src="../js/jquery-3.2.1.js"></script>
+  </head>
+  <body>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('button#bt-red').click(function(){
+                $('p').css('color','red');
+            });
+            $('button#bt-green').click(function(){
+                $('p').css('color','green');
+            });
+        });
+      </script>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo maxime
+      quam placeat temporibus, ratione aut voluptatem doloribus rem mollitia
+      eius dolorem possimus cupiditate adipisci quisquam suscipit quasi debitis
+      culpa. Placeat, laudantium adipisci impedit mollitia, delectus perferendis
+      id saepe accusantium quo voluptatibus necessitatibus modi! Accusamus illo
+      mollitia numquam esse omnis nulla!
+    </p>
+    <button id="bt-red">Đỏ</button>
+    <button id="bt-green">Xanh</button>
+  </body>
+</html>

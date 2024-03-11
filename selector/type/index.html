@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector theo loại</title>
+    <script type="text/javascript" src="../../js/jquery-3.2.1.js"></script>
+</head>
+<body>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            // 1.First-of-type
+            $(".box h2:first-of-type").css('color', 'red');
+            // 2.Last-of-type
+            $(".box p:last-of-type").css('color', 'green');
+            // 3.Only-of-type
+            $(".box h2:only-of-type").css('color', 'yellow')
+        });
+    </script>
+    <div class="box">
+        <a href="#">Link 1</a>
+        <p>Văn bản 1</p>
+        <h2>Tiêu đề 1</h2>
+        <a href="#">Link2</a>
+        <p>Văn bản 2</p>
+        <a href="#">Link3</a>
+        <p>Văn bản 3</p>
+        <h2>Tiêu đề 2</h2>
+        <h2>Tiêu đề 3</h2>
+        <h2>Tiêu đề 4</h2>
+    </div>
+
+    <div class="box">
+        <h2>Tiêu đề 5</h2>
+    </div>
+</body>
+</html>

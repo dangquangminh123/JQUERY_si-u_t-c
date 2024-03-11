@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phương thức xử lý class</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <style>
+        .highlight {
+            color: red;
+            background: yellow;
+        }
+    </style>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('p').click(function(){
+            // Cách 1
+            //    if(!$(this).hasClass('highlight')){
+            //         $('p').removeClass('highlight');
+            //         $(this).addClass('highlight');
+            //    }
+
+            // Cách 2
+            $('p').removeClass('highlight');
+            $(this).toggleClass('highlight');
+            });
+        });
+    </script>
+
+    <p>Đoạn văn bản số 1</p>
+    <p>Đoạn văn bản số 2</p>
+    <p>Đoạn văn bản số 3</p>
+    <p>Đoạn văn bản số 4</p>
+    <p>Đoạn văn bản số 5</p>
+</body>
+</html>

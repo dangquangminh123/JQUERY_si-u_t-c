@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phương thức xử lý kích thước</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <style type="text/css">
+      .box {
+        border: 1px solid #333;
+        min-height: 100px;
+        width: 200px;
+        margin: 20px 0px;
+      }
+
+      #box-1 {
+        padding: 10px 20px;
+      }
+    </style>
+    <script type="text/javascript">
+        // height lấy giá trị độ cao của các phần tử đầu tiên trong bộ chọn
+        // innerHeight() Lấy giá trị độ cao của phần tử đầu tiên trong bộ chọn gồm padding
+        // outerHeight() Lấy giá trị độ cao của phần tử đầu tiên trong bộ chọn gồm padding border
+        // Và width cũng tượng tự y chang height
+      $(document).ready(function (){
+        var height_box_1, inner_height_box_1, outer_height_box_1;
+        var width_box_1, inner_width_box_1, outer_width_box_1;
+
+        height_box_1 = $("#box-1").height();
+        inner_height_box_1 = $("#box-1").innerHeight();
+        outer_height_box_1 = $("#box-1").outerHeight();
+
+        width_box_1 = $("#box-1").width();
+        inner_width_box_1 = $("#box-1").innerWidth();
+        outer_width_box_1 = $("#box-1").outerWidth();
+
+        console.log(height_box_1 + "-" + inner_height_box_1 + "-" + outer_height_box_1);
+        console.log(width_box_1 + "-" + inner_width_box_1 + "-" + outer_width_box_1);
+
+        $('.box').height(height_box_1);
+      });
+    </script>
+
+    <h1>Phương thức xử lý kích thước trong jquery</h1>
+    <div class="box" id="box-1">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis
+      ipsa quo consequatur, voluptatem totam debitis voluptatum a est
+      consequuntur ipsam amet sequi cumque reiciendis quasi ut, quaerat, maiores
+      aspernatur? Aliquid doloremque ratione consequuntur explicabo deserunt,
+      blanditiis expedita asperiores veritatis, officia fugiat eligendi officiis
+      ab eum architecto maiores ipsum? Nobis, accusantium?
+    </div>
+    <div class="box" id="box-2">Box 2</div>
+    <div class="box" id="box-3">Box 3</div>
+  </body>
+</html>

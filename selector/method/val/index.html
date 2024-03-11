@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phương thức làm việc với giá trị</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+    <style type="text/css">
+        input {
+            display: block;
+            margin: 5px 0px 10px;
+        }
+    </style>    
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#form_login").submit(function(){
+                // val
+                var str_result;
+                var username = $('#username').val();
+                var password = $('#password').val();
+               
+                $('#val_username').text(username);
+                $('#val_password').text(password);
+                str_result = "<p>Username: <strong id='val_username'>"+username+"</strong></p><p>Password: <strong id='val_password'>"+password+"</strong></p>"
+                $('#result').html(str_result);
+                
+                return false;
+            });
+        });
+    </script>
+
+    <h1>Form đăng nhập</h1>
+    <form id="form_login" method="POST">
+        <label for="username">Username</label>
+        <input type="text" name="username" id="username" value=""/>
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" value=""/>
+        <input type="submit" name="sm_login" value="Đăng nhập">
+
+        <div id="result">
+
+        </div>
+    </form>
+</body>
+</html>

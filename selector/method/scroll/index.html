@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nhóm phương thức xử lý tọa độ - khoảng cách</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <style type="text/css">
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        body {
+            font-style: 14px;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 25px;
+        }
+
+        #wrapper {
+            width: 960px;
+            margin: 0px auto;
+        }
+
+        #header, #footer {
+            padding: 20px 0px;
+            background: #333;
+            color: #fff;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        #content {
+            position: relative;
+            padding: 20px 0px;
+        }
+
+        #content p {
+            margin-bottom: 15px;
+        }
+
+        .widget {
+            width: 100px;
+            height: 50px;
+            background: #f00;
+            position: absolute;
+            top: 200px;
+            left: 300px;
+        }
+    </style>
+    <script type="text/javascript">
+      // scrollTop():Lấy khoảng cách vị trí của thanh cuộn với phần tử đầu tiên trong bộ chọn theo phương thẳng đứng
+      // scrollTop(value):Thiếp lập khoảng cách value của thanh cuộn với phần tử đầu tiên trong bộ chọn theo phương thẳng đứng
+      // scrollLeft(): Lấy khoảng cách vị trí thanh cuộn với phần tử đâu tiên trong bộ chọn theo phương ngang
+      // scrollLeft(value): Thiếp lập khoảng cách value của thanh cuộn với phần tử đầu tiên trong bộ chọn theo phương ngang
+      // position(): lấy vị trí tương đối của selector absolute so với phần tử cha relative bao gồm top, left
+      // position().top, position().left
+      // offset() Lấy vị trí tương đối của selector so với document bao gồm top, left offset().top, offset().left
+      $(document).ready(function(){
+        var widget_top_content, widget_left_content;
+        widget_top_content = $('.widget').position().top;
+        widget_left_content = $('.widget').position().left;
+
+        var window_scroll_top, window_scroll_left;
+
+        // $(window).scrollTop(200); thiết lập khoảng cách ban đầu khi vào website
+        $(window).scroll(function(){
+            window_scroll_top = $(window).scrollTop();
+            window_scroll_left = $(window).scrollLeft();
+            console.log(window_scroll_top + '-' + window_scroll_left);
+        });
+
+
+        // offset
+        var content_top = $('#content').offset().top;
+        var footer_top = $('#footer').offset().top;
+        console.log(content_top + '-' + footer_top);
+      });
+    </script>
+
+    <div id="wrapper">
+      <div id="header">Header</div>
+      <div id="content">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
+          officiis omnis odio quo corrupti amet ea, praesentium quos nisi
+          beatae? Error ab cumque nisi repellat exercitationem. Amet temporibus,
+          maxime laboriosam doloribus rerum ab nesciunt dignissimos nam repellat
+          unde numquam, molestiae cupiditate, sunt quas vitae. Dicta atque
+          dignissimos, cum, modi velit fuga deleniti repudiandae dolor aperiam
+          officiis eius id molestias alias deserunt cumque, quod ut
+          reprehenderit quaerat perspiciatis autem! Ut, assumenda voluptatum
+          facere distinctio possimus praesentium quasi beatae ratione, quibusdam
+          fugiat, magnam ex harum vel iste dicta obcaecati quidem libero
+          exercitationem. Natus tempora, voluptates autem id nesciunt asperiores
+          perferendis veritatis? Dolorem magni illo rerum eligendi accusamus
+          quod quo harum, qui quae obcaecati, dolore ea sequi ratione omnis
+          minima totam. Modi sed, earum harum ut facilis obcaecati ab error
+          perspiciatis necessitatibus vel officiis. Aspernatur quae ad beatae,
+          est suscipit voluptates pariatur. Dolorum distinctio excepturi unde ex
+          laudantium voluptate? Id voluptatum ipsa earum.
+        </p>
+        <div class="widget">
+            Widget
+        </div>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
+          officiis omnis odio quo corrupti amet ea, praesentium quos nisi
+          beatae? Error ab cumque nisi repellat exercitationem. Amet temporibus,
+          maxime laboriosam doloribus rerum ab nesciunt dignissimos nam repellat
+          unde numquam, molestiae cupiditate, sunt quas vitae. Dicta atque
+          dignissimos, cum, modi velit fuga deleniti repudiandae dolor aperiam
+          officiis eius id molestias alias deserunt cumque, quod ut
+          reprehenderit quaerat perspiciatis autem! Ut, assumenda voluptatum
+          facere distinctio possimus praesentium quasi beatae ratione, quibusdam
+          fugiat, magnam ex harum vel iste dicta obcaecati quidem libero
+          exercitationem. Natus tempora, voluptates autem id nesciunt asperiores
+          perferendis veritatis? Dolorem magni illo rerum eligendi accusamus
+          quod quo harum, qui quae obcaecati, dolore ea sequi ratione omnis
+          minima totam. Modi sed, earum harum ut facilis obcaecati ab error
+          perspiciatis necessitatibus vel officiis. Aspernatur quae ad beatae,
+          est suscipit voluptates pariatur. Dolorum distinctio excepturi unde ex
+          laudantium voluptate? Id voluptatum ipsa earum.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
+          officiis omnis odio quo corrupti amet ea, praesentium quos nisi
+          beatae? Error ab cumque nisi repellat exercitationem. Amet temporibus,
+          maxime laboriosam doloribus rerum ab nesciunt dignissimos nam repellat
+          unde numquam, molestiae cupiditate, sunt quas vitae. Dicta atque
+          dignissimos, cum, modi velit fuga deleniti repudiandae dolor aperiam
+          officiis eius id molestias alias deserunt cumque, quod ut
+          reprehenderit quaerat perspiciatis autem! Ut, assumenda voluptatum
+          facere distinctio possimus praesentium quasi beatae ratione, quibusdam
+          fugiat, magnam ex harum vel iste dicta obcaecati quidem libero
+          exercitationem. Natus tempora, voluptates autem id nesciunt asperiores
+          perferendis veritatis? Dolorem magni illo rerum eligendi accusamus
+          quod quo harum, qui quae obcaecati, dolore ea sequi ratione omnis
+          minima totam. Modi sed, earum harum ut facilis obcaecati ab error
+          perspiciatis necessitatibus vel officiis. Aspernatur quae ad beatae,
+          est suscipit voluptates pariatur. Dolorum distinctio excepturi unde ex
+          laudantium voluptate? Id voluptatum ipsa earum.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
+          officiis omnis odio quo corrupti amet ea, praesentium quos nisi
+          beatae? Error ab cumque nisi repellat exercitationem. Amet temporibus,
+          maxime laboriosam doloribus rerum ab nesciunt dignissimos nam repellat
+          unde numquam, molestiae cupiditate, sunt quas vitae. Dicta atque
+          dignissimos, cum, modi velit fuga deleniti repudiandae dolor aperiam
+          officiis eius id molestias alias deserunt cumque, quod ut
+          reprehenderit quaerat perspiciatis autem! Ut, assumenda voluptatum
+          facere distinctio possimus praesentium quasi beatae ratione, quibusdam
+          fugiat, magnam ex harum vel iste dicta obcaecati quidem libero
+          exercitationem. Natus tempora, voluptates autem id nesciunt asperiores
+          perferendis veritatis? Dolorem magni illo rerum eligendi accusamus
+          quod quo harum, qui quae obcaecati, dolore ea sequi ratione omnis
+          minima totam. Modi sed, earum harum ut facilis obcaecati ab error
+          perspiciatis necessitatibus vel officiis. Aspernatur quae ad beatae,
+          est suscipit voluptates pariatur. Dolorum distinctio excepturi unde ex
+          laudantium voluptate? Id voluptatum ipsa earum.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
+          officiis omnis odio quo corrupti amet ea, praesentium quos nisi
+          beatae? Error ab cumque nisi repellat exercitationem. Amet temporibus,
+          maxime laboriosam doloribus rerum ab nesciunt dignissimos nam repellat
+          unde numquam, molestiae cupiditate, sunt quas vitae. Dicta atque
+          dignissimos, cum, modi velit fuga deleniti repudiandae dolor aperiam
+          officiis eius id molestias alias deserunt cumque, quod ut
+          reprehenderit quaerat perspiciatis autem! Ut, assumenda voluptatum
+          facere distinctio possimus praesentium quasi beatae ratione, quibusdam
+          fugiat, magnam ex harum vel iste dicta obcaecati quidem libero
+          exercitationem. Natus tempora, voluptates autem id nesciunt asperiores
+          perferendis veritatis? Dolorem magni illo rerum eligendi accusamus
+          quod quo harum, qui quae obcaecati, dolore ea sequi ratione omnis
+          minima totam. Modi sed, earum harum ut facilis obcaecati ab error
+          perspiciatis necessitatibus vel officiis. Aspernatur quae ad beatae,
+          est suscipit voluptates pariatur. Dolorum distinctio excepturi unde ex
+          laudantium voluptate? Id voluptatum ipsa earum.
+        </p>
+      </div>
+      <div id="footer">
+        Footer
+      </div>
+    </div>
+  </body>
+</html>

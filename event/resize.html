@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sự kiện resize trong JQUERY</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+    <style>
+
+    </style>
+     <script type="text/javascript">
+         $(document).ready(function(){
+            // Ban đầu cần phải thiết lập và set biến các thứ
+            var size_width = $(window).width();
+            $('#size_width strong#result').text(size_width+'px');
+            $(window).resize(function(){
+                // Khi kích thước khung hình thay đổi thì cập nhập lại kích thước
+                size_width = $(window).width();
+                $('#size_width strong#result').text(size_width+'px');
+            });
+         });
+     </script>
+
+     <h1>Sự kiện resize trong jquery</h1>
+     <p id="size_width">Độ rộng trình duyệt: <strong id="result"></st></p>
+</body>
+</html>

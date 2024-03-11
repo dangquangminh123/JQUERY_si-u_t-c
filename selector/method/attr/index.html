@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phương thức xử lý thuộc tính</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            // Click vào a hiển thị lên link của hình ảnh thông qua alert();
+            $('a.get_link_img').click(function(){
+                var link_img;
+                var width_img;
+                // 1. Lấy giá trị thuộc tính
+                // link_img = $("img").attr('src');
+                // 2. Set giá trị thuộc tính
+                link_img = $("img").attr('title','Mafex superboy');
+                // 3. Lấy giá trị thuộc tinh
+                width_img = $("img").attr('width', '30%');
+                alert(width_img);
+                return false;
+            });
+            // Hủy giá trị attribute
+            $('a.remove_attr').click(function(){
+                $("img").removeAttr('src');
+                $("img").removeAttr('data-href');
+                return false;
+            })
+        });
+    </script>
+    <img src="../images/super_boy.jpg" data-href="abc.html" width="20%" alt="" srcset=""/>
+    <a href="#" class="get_link_img">Lấy thông tin ảnh</a>
+    <a href="#" class="remove_attr">Hủy giá trị thuộc tính</a>
+</body>
+</html>

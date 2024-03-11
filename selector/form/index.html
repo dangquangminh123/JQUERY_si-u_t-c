@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector Form</title>
+    <script type="text/javascript" src="../../js/jquery-3.2.1.js"></script>
+</head>
+<body>
+    <style type="text/css">
+        form * {
+            display: block;
+            margin-bottom: 10px;
+        }
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            // 1. Đếm số input trên form
+            var num_input  = $("form :input").length;
+            // 2.Input text => background red
+            $("form :text").css('border','1px solid #f00');
+            // 3. Input Password => background green
+            $("form :password").css('border', '1px solid #008000');
+            // 4. Đếm số lượng phần tử selected đã được chọn
+            var input_select_selected = $("form :selected");
+            input_select_selected.each(function(){
+                alert($(this).text()); //JQUERY
+            })
+            //5. name và value của ô checkbox
+            // var input_checkbox_checked = $("form :checked");
+            // input_checkbox_checked.each(function() {
+            //     alert($(this).val());
+            // });
+            // 6. Phần tử disabled màu vàng
+            $("form :disabled").css('border', '1px solid #FFFF00')
+            // 7. enabled (các thằn khác) màu xanh 
+            $("form :enabled").css('border', '1px solid #0000FF')
+        });
+    </script>
+    <form>
+        <input type="text" name="" />
+        <input type="password" name="" disabled="disabled">
+        <input type="checkbox" class="hobby" name="hobby" value="game" checked="checked"/>
+        <input type="checkbox" class="hobby" name="hobby" value="shopping" checked="checked"/>
+        <input type="checkbox" class="hobby" name="hobby" value="read_book" checked="checked"/>
+        <input type="radio" name="" value="" />
+        <textarea></textarea>
+        <button>Nút Bấm</button>
+        <input type="submit" name="" />
+        <input type="file" name="" />
+        <select>
+            <option>Lựa chọn</option>
+            <option>PHP</option>
+            <option selected="selected">JQUERY</option>
+        </select>
+    </form>
+</body>
+</html>

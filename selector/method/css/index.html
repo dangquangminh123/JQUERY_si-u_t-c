@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhóm phương thức tác động css</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+    <style type="text/css">
+        .box {
+            padding: 50px 100px;
+            background: #333;
+            color: #fff;
+            float: left;
+        }
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.box').click(function(){
+                $(this).css({background: 'red', padding: '100px 200px'});
+                $('#css_padding').text($(this).css('padding'));
+            });
+        })
+    </script>
+
+    <div class="box">
+        BOX
+    </div>
+    <p>Padding: <span id="css_padding"></span></p>
+</body>
+</html>

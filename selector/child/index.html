@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector theo cấp con</title>
+    <script type="text/javascript" src="../../js/jquery-3.2.1.js"></script>
+</head>
+<body>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            // 1. Chọn bài viết đầu tiên và cho nó màu đỏ
+            $("ul.list-post :first-child").css('color', 'red');
+            // 2. Chọn bài viết cuối cùng và cho nó màu xanh
+            $("ul.list-post :last-child").css('color', 'blue');
+            // nth-child(index, odd, even, operation)
+            // 3. Chọn bài viết ở vị trí thứ 2 và cho nó màu xám
+            $("ul.list-post :nth-child(2)").css('color', 'gray');
+            // 4. Bài viết ở vị trí chẵn
+            $("ul.list-post :nth-child(even)").css('color', 'orange');
+            // 5. Bài viết ở vị trí lẻ
+            $("ul.list-post :nth-child(odd)").css('color', 'purple');
+            // 6. Bài viết ở vị trí bội số của 3
+            $("ul.list-post :nth-child(3n)").css('color', 'green');
+            // 7. Bài viết ở vị trí con duy nhất của phần tử cha
+            $("ul.list-post li:only-child").css('color', 'yellow');
+
+        });
+    </script>
+    <ul class="list-post">
+        <li>Bài viết 1</li>
+        <li>Bài viết 2</li>
+        <li>Bài viết 3</li>
+        <li>Bài viết 4</li>
+        <li>Bài viết 5</li>
+        <li>Bài viết 6</li>
+        <li>Bài viết 7</li>
+        <li>Bài viết 8</li>
+    </ul>
+    <ul class="list-post">
+        <li>Bài viết 9</li>
+    </ul>
+</body>
+</html>

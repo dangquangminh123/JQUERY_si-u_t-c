@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hiệu ứng fade</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <style type="text/css">
+      #box {
+        width: 400px;
+        padding: 40px;
+        background: #e74c3c;
+        text-align: center;
+        color: #fff;
+        display: none;
+      }
+    </style>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("#effect-fadeIn").click(function(){
+            $("#box").fadeIn(1000);
+        });
+        $("#effect-fadeOut").click(function(){
+            $("#box").fadeOut(1000);
+        });
+        $("#effect-fadeToggle").click(function(){
+            $("#box").fadeToggle(1000);
+        });
+      });
+    </script>
+
+    <h1>Hiệu ứng show - hide trong jquery</h1>
+    <a href="#" id="effect-fadeIn">FadeIn</a>
+    <a href="#" id="effect-fadeOut">FadeOut</a>
+    <a href="#" id="effect-fadeToggle">FadeToggle</a>
+    <div id="box">BOX</div>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, debitis
+      ad. Ducimus inventore itaque beatae, in doloribus quaerat omnis quod eos
+      deleniti, fugiat optio rerum explicabo laudantium ab veritatis est.
+      Quaerat odio quisquam veritatis recusandae ipsum adipisci fugiat minima
+      accusantium? Ut, vero dolore. Necessitatibus itaque a voluptates
+      doloremque unde voluptatum.
+    </p>
+  </body>
+</html>

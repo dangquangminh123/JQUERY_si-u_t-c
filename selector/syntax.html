@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cú pháp viết code jquery</title>
+    <script type="text/javascript" src="../js/jquery-3.2.1.js"></script>
+</head>
+<body>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            // Thay đổi dữ liệu cho đối tượng nào ? => p (selector)
+            // Thay đổi cái gì ? => Text (method text jquery)
+            // 1. Xuất ra họ của người
+            $('p span.first-name').text('Phan Văn');
+            // 2. Xuất ra tên của người đó
+            $('p span.last-name').text('Cương')
+        });
+    </script>
+    <p>Họ: <span class="first-name"></span></p> <!-- => I`m Phan Văn Cương -->
+    <p>Tên: <span class="last-name"></span></p> <!-- => I`m Phan Văn Cương -->
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector theo định vị</title>
+    <script type="text/javascript" src="../../js/jquery-3.2.1.js"></script>
+</head>
+<body>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            // 1. Chọn phần tử p có chỉ số 1 => màu đỏ
+            $("p:eq(0)").css('color','red');
+            // 1.1 Chọn phần tử p trong box có chỉ số 1 => màu vàng
+            $("div.box p:eq(1)").css('color', 'yellow');
+            // 2. Chọn phần tử p đầu tiên => màu xanh
+            $("p:first").css('color','blue');
+            // 3. Chọn phần tử p cuối cùng => màu cam
+            $("p:last").css('color','orange');
+            // 4. Chọn phần tử p có chỉ số lớn hơn 1 => màu xanh lá
+            // $("p:gt(1)").css('color','green');
+            // 4.2 Chọn phần tử có chỉ số bé hơn 3 => màu đỏ
+            $("p:lt(2)").css('color','red');
+            // 5. Chọn phần tử có chỉ số lẻ => màu tím
+            $("p:odd").css('color','purple');
+            // 6. Chọn phần tử có chỉ số chẵn => màu xám
+            $("p:even").css('color', 'gray');
+            // 7. Chọn tất cả phần tử loại trừ phần tử p có chỉ số 2 => màu hồng
+            $("p:not('p:eq(2)')").css('color','pink');
+            // 7.1  Chọn tất cả phần tử loại trừ phần tử p có chỉ số 2 (nhưng lại được bọc trong class) => màu hồng
+            // $("p:not('p.p2')").css('color','pink');
+        });
+    </script>
+    <p>Đoạn văn 0</p>
+    <p>Đoạn văn 1</p>
+    <!-- <p class="p2">Đoạn văn 2</p> -->
+    <p>Đoạn văn 2</p>
+    <p>Đoạn văn 3</p>
+    <p>Đoạn văn 4</p>
+    <p>Đoạn văn 5</p>
+    <p>Đoạn văn 6</p>
+    <p>Đoạn văn 7</p>
+    <div class="box">
+        <p>Đoạn văn 8</p>
+        <p>Đoạn văn 9</p>
+        <p>Đoạn văn 10</p>
+    </div>
+    <a href="#">Text 1</a>
+</body>
+</html>
