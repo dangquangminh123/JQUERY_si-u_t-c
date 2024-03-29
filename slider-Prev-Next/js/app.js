@@ -22,4 +22,6 @@ $(document).ready(function () {
             $('.list-thumb .thumb-item.active').prev().click();
         }
     });
+    // Active phần tử đầu tiên
+    $('.list-thumb .thumb-item:first-child').click();
 });
