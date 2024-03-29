@@ -1,0 +1,65 @@
+body {
+    margin: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+#wrapper {
+    width: 960px;
+    margin: 0 auto;
+}
+
+#wp-slider {
+    width: 400px;
+}
+
+.show-picture {
+    height: 300px;
+    position: relative;
+}
+
+.slider-nav div{
+    position: absolute;
+    top: 50%;
+    width: 26px;
+    height: 28px;
+    background: rgba(229, 229, 229, 60%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-50%);
+    transition: all 0.25s ease-in-out;
+    cursor: pointer;
+}
+
+.slider-nav .next-btn {
+    right: 0px;
+}
+
+.slider-nav div:hover {
+    background: rgba(155, 12, 12, 60%);
+    color: #D0D0D0;
+}
+
+ul.list-thumb {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0px;
+    margin-top: 20px;
+}
+
+ul.list-thumb .thumb-item {
+    width: 80px;
+    border: 2px solid #c4c4c4;
+    opacity: 80%;
+    cursor: pointer;
+}
+
+ul.list-thumb .thumb-item.active {
+    opacity: 100%;
+    border: 2px solid #FB9393;
+}
