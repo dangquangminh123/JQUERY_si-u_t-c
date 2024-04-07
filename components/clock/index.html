@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plugin Clock for Website</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <!-- Link docs plugin https://github.com/s-yadav/radialIndicator -->
+    <div class="clock"></div>
+    <script src="./js/radialIndicator.js"></script>
+    <script src="./js/angular.radialIndicator.js"></script>
+    <script>
+         const clock = radialIndicator(".clock", {
+            radius: 200, //thiết lập bán kính cho hình tròn này
+            barWidth: 30, //Thiết lập độ rộng cho đường tròn hình tròn
+            barColor: '#e84118',
+            minValue: 0,
+            maxValue: 60,
+            fontWeight: 'normal',
+            roundCorner: true,
+            format: function (value) {
+                const date = new Date();
+                return date.getHours() + ':' + date.getMinutes();
+            }
+        });
+        
+        setInterval(() => {
+        clock.value(new Date().getSeconds() + 1);
+        }, 1000);
+    </script>
+</body>
+</html>

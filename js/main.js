@@ -1,3 +1,3 @@
-$(document).ready(function(){
-    alert('IMPORT THÀNH CÔNG');
-});
+// $(document).ready(function(){
+//     alert('IMPORT THÀNH CÔNG');
+// });

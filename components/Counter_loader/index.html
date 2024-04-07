@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Counter loader</title>
+</head>
+<body>
+    <div class="preloader">
+        <div class="counter">0</div>
+    </div>
+    <section>
+        <h2>Welcome back to all !<span>Stay Tuned For More Video...</span></h2>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa nobis cupiditate reprehenderit 
+            numquam eos quibusdam dolore molestias consequatur aliquid eum corporis consequuntur repudiandae incidunt, 
+            commodi fugiat est ut et doloribus nemo. Corporis, tenetur eum nulla consequuntur assumenda fugiat. Totam, dignissimos!
+        </p>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        function counter() {
+            var count = setInterval(function(){
+                var c = parseInt($('.counter').text());
+                $('.counter').text((++c).toString());
+                if(c == 100) {
+                    clearInterval(count);
+                    // thiết lập thuộc tính mất dần counter class
+                    $('.counter').addClass('hide')
+                    // Sau đso tiếp tục active phần đoạn văn
+                    $('.preloader').addClass('active')
+                }
+            }, 80)
+        }
+        counter();
+    </script>
+</body>
+</html>
