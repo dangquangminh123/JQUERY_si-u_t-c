@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLugin 8 3D Slider Rotate</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/fontawesome.min.css"
+    />
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/jquery.hislide.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body>
+   <!--  3D Image Rotating slider -->
+
+    <div class="slide hi-slide">
+      <div class="hi-prev"></div>
+      <div class="hi-next"></div>
+      <ul>
+        <li><img src="images/bienthe_node.jpg" alt="Img 1"></li>
+        <li><img src="images/java_advance.jpg" alt="Img 2"></li>
+        <li><img src="images/react_next.jpg" alt="Img 3"></li>
+        <li><img src="images/gsapJs.jpg" alt="Img 4"></li>
+        <li><img src="images/bienthe_Jquery.jpg" alt="Img 5"></li>
+        <li><img src="images/bienthe_laravel.jpg" alt="Img 6"></li>
+        <li><img src="images/bienthe_php.jpg" alt="Img 7"></li>
+      </ul>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.hislide.js" ></script>
+    <script>
+      // $('.slide').hiSlide();
+      $(document).ready(function() {
+        $('.slide').hiSlide({ 
+            interval: 5000, 
+            speed: 500, 
+          });
+      });
+    </script>
+   
+</body>
+</html>

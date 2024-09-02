@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLugin 10 RainyDay</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/fontawesome.min.css"
+    />
+    <style>
+        body {
+            overflow: hidden;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body onload="run();">
+    <!--3D Image Rotating slider -->
+    <img src="" alt="" srcset="" id="rainElement">
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/rainyday.min.js" ></script>
+    <script>
+      // $('.slide').hiSlide();
+        function run() {
+                var image = document.getElementById('rainElement');
+                image.onload = function () {
+                    var engine = new RainyDay({
+                        image: this
+                    });
+                    engine.rain([
+                        [1, 2, 8000]
+                    ]);
+                    engine.rain([
+                        [3, 3, 0.88],
+                        [5, 5, 0.9],
+                        [6, 2, 1]
+                    ], 100);
+                };
+                image.crossOrigin = 'anonymous';
+                image.src = 'https://static.vecteezy.com/system/resources/thumbnails/038/946/353/small_2x/ai-generated-spring-flowers-rain-drops-abstract-blurred-background-flowers-fresh-rain-photo.jpg';
+        }
+    </script>
+   
+</body>
+</html>

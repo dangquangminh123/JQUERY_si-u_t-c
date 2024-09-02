@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/fontawesome.min.css"
+    />
+    <title>Card Ui 9</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <div id="book">
+        <div style="background-image: url(./images/bienthe_node.jpg);"></div>
+        <div style="background-image: url(./images/bienthe_react.jpg);"></div>
+        <div style="background-image: url(./images/bienthe_vue.jpg);"></div>
+        <div style="background-image: url(./images/combo_vue.jpg);"></div>
+        <div style="background-image: url(./images/gsapJs.jpg);"></div>
+        <div style="background-image: url(./images/java_advance.jpg);"></div>
+    </div>
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./js/turn.js"></script>
+    <!-- <script src="./js/turn.min.js"></script> -->
+    <script type="text/javascript">
+        $('#book').turn({gradients: true, acceleration: true});
+    </script>
+
+</body>
+</html>

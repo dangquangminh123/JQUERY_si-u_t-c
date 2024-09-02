@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLugin 6 Bx Slider</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/fontawesome.min.css"
+    />
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/bxslider.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div id="wrapper">
+      <div id="navbar">
+        <!-- <nav> -->
+          <ul class="main-menu d-flex text-uppercase container">
+            <li><a href="#">Trang chủ</a></li>
+            <li><a href="#">Giới thiệu</a></li>
+            <li><a href="#">Đào tạo</a></li>
+            <li><a href="#">Dịch vụ</a></li>
+            <li><a href="#">Galerry</a></li>
+            <li><a href="#">tin tức</a></li>
+            <li><a href="#">tư vấn</a></li>
+            <li><a href="#">Liên hệ</a></li>
+          </ul>
+        <!-- </nav> -->
+      </div>
+      <ul id="slider-area">
+          <li>
+              <img src="./images/images1.jpg" alt="" />
+              <p class="text-area">We are clothes <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                Necessitatibus, quas quidem reiciendis aliquam officiis suscipit!</span></p>
+          </li>
+          <li>
+            <img src="./images/images2.jpg" alt="" />
+            <p class="text-area">We are clothes <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+              Necessitatibus, quas quidem reiciendis aliquam officiis suscipit!</span></p>
+          </li>
+          <li>
+            <img src="./images/images3.jpg" alt="" />
+            <p class="text-area">We are clothes <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+              Necessitatibus, quas quidem reiciendis aliquam officiis suscipit!</span></p>
+          </li>
+      </ul>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/bxslider.min.js"></script>
+    <script>
+      var slider = $('#slider-area');
+      var activeClass = 'active-one';
+      slider.bxSlider({
+        auto: true,
+        pager: false,
+        onSliderLoad: function() {
+          slider.children('li').eq(1).addClass(activeClass);
+        },
+        onSlideBefore: function($slideElement, oldIndex, newIndex) {
+          slider.children('li').removeClass(activeClass);
+          $slideElement.addClass(activeClass);
+        }
+      })
+    </script>
+   
+</body>
+</html>

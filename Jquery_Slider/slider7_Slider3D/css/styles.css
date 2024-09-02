@@ -1,0 +1,12 @@
+.carousel {
+  height: 650px;
+  perspective: 300px;
+}
+
+.carousel .carousel-item {
+  width: 500px;
+}
+
+.carousel .carousel-item img {
+  width: 100%;
+}

@@ -1,0 +1,135 @@
+/*Từ tổng quan đến chi tiết 
+Từ ngoài vào trong
+từ sau ra trước
+từ trên xuống dưới
+từ trái sang phải */
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Open Sans";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+  
+  /* Ban đầu container chỉ là mục đích cách 2 căn lề 1 khoảng, nhưng lại cho thêm display flex */
+.container {
+    width: 1170px;
+    /* padding-left: 15px;
+    padding-right: 15px; */
+    margin: 0px auto;
+  }
+  
+ul {
+    list-style: none;
+    padding: 0px;
+  }
+
+.container-fuild {
+    width: 960px;
+    margin: 0px auto;
+}
+/* ============NAVBAR=========== */
+#navbar {
+    background: #1d1d1d;
+    width: 100%;
+  }
+  
+  /* #navbar nav {
+      width: 100%;
+  } */
+  
+  #navbar ul.main-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  #navbar ul.main-menu li {
+    padding: 12px 0px;
+  }
+  
+  #navbar ul.main-menu li a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    border-radius: 12px;
+    padding: 7px 16px 7px 18px;
+    font-size: 11px;
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid #1d1d1d;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  #navbar ul.main-menu li a:first-child {
+    margin-left: 0px;
+  }
+  
+  #navbar ul.main-menu li a:last-child {
+    margin-right: 0px;
+  }
+  
+  #navbar ul.main-menu li:hover a {
+    border: 1px solid #ddd;
+    background: #000000;
+  }
+
+/* Slider-area */
+.bx-wrapper {
+    left: 0;
+    box-shadow: none;
+    border: none;
+    margin-bottom: 0;
+}
+
+.bx-wrapper img {
+    height: 100vh;
+    width: 100%;
+}
+
+#slider-area li {
+    height: 100vh;
+}
+
+#slider-area li p {
+    font-weight: 900;
+    transition: all 1s;
+    position: absolute;
+    display: inline-block;
+    top: 1rem;
+    left: 3rem;
+    font-size: 4rem;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    opacity: 0;
+    color: #e74c3c;
+}
+
+#slider-area .active-one .text-area {
+    top: 7rem;
+}
+
+#slider-area .active-one p {
+  opacity: 1;
+  text-shadow: 0 2px 5px rgb(255 108 55 / 67%);
+  font-weight: 900;
+}
+
+.text-area span {
+    font-size: 14px;
+    display: block;
+    line-height: 2.6;
+    text-align: justify;
+    font-weight: 800;
+    text-transform: none;
+    width: 64%;
+    text-shadow: 0 2px 5px rgba(85, 83, 83, 0.5);
+    margin: auto;
+    color: #f1c40f;
+}
+
+

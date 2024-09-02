@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    width: 1170px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0px auto;
+    display: flex;
+}
+
+.container .wrapper {
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container .wrapper .item-area {
+    width: 20rem;
+    margin: 0 12px;
+}
+
+
+.container .wrapper .item-area img{
+    max-width: 100%;
+    overflow: hidden;
+    display: block;
+}
+
+.container .wrapper .item-area img .img-text {
+    height: 190px;
+}
+  
+.wrapper .item-area img .img-text h2 {
+    font-family: "Courier New", Courier, monospace;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.wrapper .item-area img .img-text p {
+    text-align: justify;
+}
+
+

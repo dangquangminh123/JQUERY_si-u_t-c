@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLugin 3 Jquery</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/fontawesome.min.css"
+    />
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="wrapper">
+            <div class="about-left">
+                <div class="project">
+                    <div class="project_card">
+                        <img src="./images/bienthe_node.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="about-right">
+                <h2>Node js</h2>
+                <h4>Front-End Developer</h4>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                    Ipsa blanditiis perspiciatis non, voluptates quos ex!</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                    Ipsa blanditiis perspiciatis non, voluptates quos ex!</p>
+                <button>Details</button>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script src="js/jquery.hover3d.js"></script>
+    <script>
+       $(".project").hover3d({
+            selector: ".project_card",
+            // hoverInClass: ".project_card",
+            shine: true,
+            
+            sensitivity: 20,
+        });
+
+    </script>
+</body>
+</html>

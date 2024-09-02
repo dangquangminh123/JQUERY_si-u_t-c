@@ -1,0 +1,79 @@
+body {
+  background: deepskyblue;
+}
+
+.wrapper {
+  margin: 200px 400px;
+  -webkit-perspective: 1500px;
+  padding-left: 10%;
+}
+
+.box {
+  animation: animate 7s linear infinite;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transform-origin: 180px 0 0;
+}
+
+.box div {
+  position: absolute;
+  height: 250px;
+  width: 200px;
+}
+
+.box div:nth-child(1) {
+  transform: rotateY(0deg) translateX(180px);
+  padding: 0 0 0 150px;
+  background-image: url('../images/bienthe_Jquery.jpg');
+  background-size: cover;
+  background-position: center center;
+  -webkit-background-size: cover;
+}
+
+.box div:nth-child(2) {
+  transform: rotateY(-72deg) translateX(180px);
+  padding: 0 0 0 150px;
+  background-image: url('../images/bienthe_laravel.jpg');
+  background-size: cover;
+  background-position: center center;
+  -webkit-background-size: cover;
+}
+
+.box div:nth-child(3) {
+  transform: rotateY(-144deg) translateX(180px);
+  padding: 0 0 0 150px;
+  background-image: url('../images/bienthe_node.jpg');
+  background-size: cover;
+  background-position: center center;
+  -webkit-background-size: cover;
+}
+
+.box div:nth-child(4) {
+  transform: rotateY(-216deg) translateX(180px);
+  padding: 0 0 0 150px;
+  background-image: url('../images/bienthe_php.jpg');
+  background-size: cover;
+  background-position: center center;
+  -webkit-background-size: cover;
+}
+
+.box div:nth-child(5) {
+  transform: rotateY(-288deg) translateX(180px);
+  padding: 0 0 0 150px;
+  background-image: url('../images/bienthe_react.jpg');
+  background-size: cover;
+  background-position: center center;
+  -webkit-background-size: cover;
+}
+
+@keyframes animate {
+  from{
+    transform: rotateY(0deg);
+  }
+  to{
+    transform: rotateY(-360deg);
+  }
+}
+
+.box:hover {
+  -webkit-animation-play-state: paused;
+}

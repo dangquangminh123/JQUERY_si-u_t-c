@@ -1,0 +1,23 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f5d4b1;
+}
+
+.text-area h2{
+    font-family: poppins;
+    font-size: 70px;
+    text-align: center;
+    margin: 0;
+    font-style: italic;
+    text-transform: uppercase;
+}
+
+#t {
+    font-size: 25px;
+    line-height: 40px;
+    font-family: monotype corsiva;
+    margin: 0 auto;
+}

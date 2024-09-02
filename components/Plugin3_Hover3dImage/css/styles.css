@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.container {
+    width: 1170px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0px auto;
+    display: flex;
+}
+
+.container .wrapper {
+    height: auto;
+    display: flex;
+    margin-top: 15px;
+}
+
+.container .wrapper .about-left {
+    flex-basis: 35%;
+    justify-content: flex-start;
+}
+
+.container .wrapper .about-left .project {
+    width: 20rem;
+    /* margin: 0 12px; */
+}
+
+.container .wrapper .about-left .project .project_card img {
+    max-width: 100%;
+    overflow: hidden;
+    display: block;
+}
+
+.container .wrapper .about-right {
+    flex-basis: 65%;
+    justify-content: flex-end;
+    margin-left: 10%;
+}
+
+.container .wrapper .about-right h2 {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.container .wrapper .about-right h4 {
+    text-transform: uppercase;
+    margin-bottom: 13px;
+}
+
+.container .wrapper .about-right button {
+    background: #262626;
+    border: none;
+    padding: 15px 25px;
+    display: inline-block;
+    margin-top: 5%;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 50px;
+}

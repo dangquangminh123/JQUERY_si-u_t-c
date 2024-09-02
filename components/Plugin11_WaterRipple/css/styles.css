@@ -1,0 +1,13 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    background: url('../images/images1.jpg');
+    background-size: cover;
+    -webkit-background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100vh;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLugin 2 Jquery</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/fontawesome.min.css"
+    />
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/jquery.expandable.css">
+</head>
+<body>
+    <div class="container">
+        <div class="wrapper">
+            <div class="item-area">
+                <div class="single-item">
+                    <img src="./images/bienthe_vue.jpg" alt="" srcset=""/>
+                    <div class="img-text">
+                        <h2>Vue Js</h2>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus reprehenderit neque iure maiores,
+                        aliquid suscipit obcaecati itaque beatae iste placeat?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="item-area">
+                <div class="single-item">
+                    <img src="./images/bienthe_react.jpg" alt="" srcset=""/>
+                    <div class="img-text">
+                        <h2>React Js</h2>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus reprehenderit neque iure maiores,
+                        aliquid suscipit obcaecati itaque beatae iste placeat?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="item-area">
+                <div class="single-item">
+                    <img src="./images/bienthe_node.jpg" alt="" srcset=""/>
+                    <div class="img-text">
+                        <h2>Node Js</h2>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus reprehenderit neque iure maiores,
+                        aliquid suscipit obcaecati itaque beatae iste placeat?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/jquery.expandable.js"></script>
+    <script>
+        $('.single-item').expandable({
+            //đơn vị là px
+            'height': 250,
+            'more':'Show more',
+            'less':'Show less',
+            'no_less':false,
+            'animation_duration': 500
+
+        });
+
+    </script>
+</body>
+</html>

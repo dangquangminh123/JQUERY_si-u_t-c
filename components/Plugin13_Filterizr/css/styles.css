@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.cards {
+    height: 250px;
+    border: 0px;
+    padding: 15px;
+}
+
+.filter-container {
+    margin: 0;
+}
+
+.filtr-title {
+    position: absolute;
+    bottom: 20px;
+    padding: 5px;
+    background: #3e3e3e;
+}
+
+.filter-container .filtr-item img {
+    max-width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    margin: 10px 0px;
+}
+
+/* ul {
+    padding: 0;
+    margin-top: 50px;
+    text-align: center;
+}
+
+ul li {
+    display: inline-block;
+    list-style: none;
+    background: #262626;
+    color: #fff;
+    padding: 6px 0px;
+    font-family: poppins;
+    border-radius: 50px;
+    margin: 15px;
+    cursor: pointer;
+    font-weight: 900;
+    width: 170px;
+    font-size: 17px;
+    text-transform: uppercase;
+} */

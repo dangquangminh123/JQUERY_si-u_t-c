@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLugin 13 Filterizr</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/fontawesome.min.css"
+    />
+    <link rel="stylesheet" href="./css/styles.css">
+  
+</head>
+<body>
+    <div class="container">
+       <h1 class="text-center pt-3">
+          Filterizr
+       </h1>
+       <div class="filters">
+          <ul class="btn-group simplefilter d-flex p-2">
+            <li class="btn btn-primary m-1 filtr-controls badge-fill" data-multifilter="all">All</li>
+            <li class="btn btn-primary m-1 filtr-controls badge-fill" data-filter="1">Frontend</li>
+            <li class="btn btn-primary m-1 filtr-controls badge-fill" data-filter="2">Backend</li>
+            <li class="btn btn-primary m-1 filtr-controls badge-fill" data-filter="3">Fullstack</li>
+          </ul>
+          <div class="additonal p-2 d-flex justify-content-between">
+            <button class="btn btn-warning" id="shuffle">Shuffle</button>
+            <div class="input-group pl-2 pr-2">
+              <input type="text" value="search..." class="form-control fltr-controls filtr-search" data-search/>
+            </div>
+            <div class="input-group">
+              <div class="btn-group pr-2">
+                  <button class="btn btn-danger filtr-controls" id="asc-btn">Asc</button>
+                  <button class="btn btn-danger filtr-controls" id="des-btn">Desc</button>
+              </div>
+              <select data-sortOrder class="custom-select filtr-controls">
+                  <option value="sortData" class="filtr-controls">Sort Order</option>
+                  <option value="author" class="filtr-controls">author</option>
+              </select>
+            </div>
+          </div>
+       </div>
+
+       <div class="cards d-flex row filter-container">
+          <div class="col-md-4 filtr-item" data-category="1" data-sort="value" data-author="r">
+            <img src="./images/bienthe_react.jpg" alt="sample">
+            <div class="filtr-title">ReactJs</div>
+          </div>
+          <div class="col-md-4 filtr-item" data-category="1" data-sort="value" data-author="j">
+              <img src="./images/bienthe_Jquery.jpg" alt="sample">
+              <div class="filtr-title">Jquery</div>
+          </div>
+          <div class="col-md-4 filtr-item" data-category="1" data-sort="value" data-author="v">
+              <img src="./images/bienthe_vue.jpg" alt="sample">
+              <div class="filtr-title">Vue</div>
+            </div>
+          <div class="col-md-4 filtr-item" data-category="1" data-sort="value" data-author="qn">
+              <img src="./images/react_next.jpg" alt="sample">
+              <div class="filtr-title">React Next</div>
+          </div>
+          <div class="col-md-4 filtr-item" data-category="1" data-sort="value" data-author="g">
+              <img src="./images/gsapJs.jpg" alt="sample">
+              <div class="filtr-title">GsapJs</div>
+          </div>
+          <div class="col-md-4 filtr-item" data-category="2" data-sort="value" data-author="n">
+            <img src="./images/bienthe_node.jpg" alt="sample">
+            <div class="filtr-title">NodeJs</div>
+          </div>
+          <div class="col-md-4 filtr-item" data-category="2" data-sort="value" data-author="l">
+              <img src="./images/bienthe_laravel.jpg" alt="sample">
+              <div class="filtr-title">Laravel</div>
+          </div>
+          <div class="col-md-4 filtr-item" data-category="2" data-sort="value" data-author="p">
+              <img src="./images/bienthe_php.jpg" alt="sample">
+              <div class="filtr-title">PHP</div>
+          </div>
+          <div class="col-md-4 filtr-item" data-category="2" data-sort="value" data-author="ne">
+            <img src="./images/node_advance.jpg" alt="sample">
+            <div class="filtr-title">Nest</div>
+          </div>
+          <div class="col-md-4 filtr-item" data-category="2" data-sort="value" data-author="ja">
+            <img src="./images/java_advance.jpg" alt="sample">
+            <div class="filtr-title">Java</div>
+          </div>
+          <div class="col-md-4 filtr-item" data-category="all, 1, 2, 3" data-sort="value" data-author="lv">
+            <img src="./images/combo_vue.jpg" alt="sample">            
+            <div class="filtr-title">Laravel Vue</div>
+          </div>
+       </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>
+    <script src="./js/jquery.filterizr.min.js"></script>
+    <script>
+      // Jquery
+       const filterizd = $('.filter-container').filterizr({
+          controlsSelector: '.filtr-controls',
+          gridItemsSelector: '.filtr-item',
+          spinner: {
+            enabled: true,
+          }
+        }); 
+
+        $("#shuffle").click(() => {
+          filterizd.filterizr('shuffle')
+        });
+        
+        const sortFilterizr = (order) => {
+          filterizd.filterizr('sort', $("select :selected").val(),order)
+        }
+
+        $("#asc-btn").click(() => {
+          sortFilterizr('asc');
+        })
+
+        $("#des-btn").click(() => {
+          sortFilterizr('des');
+        })
+        // Javascripts
+        // const options = {
+        //   controlsSelector: 'filtr-controls',
+        //   gridItemsSelector: '.filtr-item',
+        //   spinner: {
+        //     enabled: true,
+        //   }
+        // }
+
+        // const filterizr = new Filterizr('.filter-container', options);
+        // document.querySelector("#shuffle").addEventListener("click", () => {
+        //   filterizr.shuffle();
+        // })
+
+        // const sortFilterizr = (order) => {
+        //   let selected_option = document.querySelector("select").options.selectedIndex;
+        //   let selected_val = document.querySelector("select").options[selected_option].value;
+        //   filterizr.sort(selected_val, order);
+        // }
+
+        // document.querySelector("#asc-btn").addEventListener('click', () => sortFilterizr('asc'))
+        // document.querySelector("#des-btn").addEventListener('click', () => sortFilterizr('des'))
+
+    </script>
+   
+</body>
+</html>

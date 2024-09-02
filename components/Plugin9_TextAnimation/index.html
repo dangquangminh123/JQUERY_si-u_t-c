@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLugin 9 animated text</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/fontawesome.min.css"
+    />
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body>
+    <!--3D Image Rotating slider -->
+    <div class="text-area">
+        <h2>Nodejs Developer</h2>
+        <div id="t">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, ....
+        </div>
+        <div id="text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, ....
+        </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/t.min.js" ></script>
+    <script>
+      // $('.slide').hiSlide();
+      $(document).ready(function() {
+        $('#t').t({ 
+            // beep: true
+            delay:2,                   // start delay in seconds [default:0]
+  
+            speed:50,                  // typing speed (ms) [default:50]
+            speed_vary: true,          // 'human like' speed variation [default:false]
+            
+            beep:true,                 // beep while typing (Web Audio API) [default:false]
+            
+            // mistype:3,                 // mistype rate: 1:N per char [default:false]
+            locale:'en',               // keyboard layout (to fit mistype); supported: 'en' (english) or 'de' (german) [default:'en']
+            
+            caret:'\u2589',            // caret content; can be html too [default:true (\u258e)]
+            blink:true,                // blink-interval in ms; if TRUE, speed*3  [default:true]
+            blink_perm:false,          // permanent blinking? if FALSE, caret blinks only on delay/pause/finish [default:false]
+            repeat: true,                  // repeat typing: if TRUE, infinite or N times [default:0]
+            tag:'span',                // wrapper tag (.t-container, .t-caret) [default:'span']
+            // pause_on_click:true,       // pauses/continues typing on click/tap (elm) [default:false]
+            // pause_on_tab_switch:true,  // pauses typing if window is inactive (Page Visibility API) [default:false]
+            
+            // init callback (ready-to-type)
+            init:function(elm){},        
+            // typing callback
+            typing:function(elm,chr_or_elm,left,total){},
+            // finished callback
+            fin:function(elm){}          
+        });
+        $('#text').t({ 
+            // beep: true
+            delay:2,                   // start delay in seconds [default:0]
+  
+            speed:50,                  // typing speed (ms) [default:50]
+            speed_vary: true,          // 'human like' speed variation [default:false]
+            
+            beep:true,                 // beep while typing (Web Audio API) [default:false]
+            
+            // mistype:3,                 // mistype rate: 1:N per char [default:false]
+            locale:'en',               // keyboard layout (to fit mistype); supported: 'en' (english) or 'de' (german) [default:'en']
+            
+            caret:'\u2589',            // caret content; can be html too [default:true (\u258e)]
+            blink:true,                // blink-interval in ms; if TRUE, speed*3  [default:true]
+            blink_perm:false,          // permanent blinking? if FALSE, caret blinks only on delay/pause/finish [default:false]
+            repeat: true,                  // repeat typing: if TRUE, infinite or N times [default:0]
+            tag:'span',                // wrapper tag (.t-container, .t-caret) [default:'span']
+            // pause_on_click:true,       // pauses/continues typing on click/tap (elm) [default:false]
+            // pause_on_tab_switch:true,  // pauses typing if window is inactive (Page Visibility API) [default:false]
+            
+            // init callback (ready-to-type)
+            init:function(elm){},        
+            // typing callback
+            typing:function(elm,chr_or_elm,left,total){},
+            // finished callback
+            fin:function(elm){}          
+        });
+      });
+    </script>
+   
+</body>
+</html>
